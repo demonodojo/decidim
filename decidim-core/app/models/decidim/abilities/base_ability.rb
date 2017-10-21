@@ -36,6 +36,8 @@ module Decidim
         can :manage, Notification do |notification|
           notification.user == user
         end
+
+        can :manage, :chats
       end
     end
   end
