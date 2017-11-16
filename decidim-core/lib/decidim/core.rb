@@ -15,6 +15,7 @@ module Decidim
   autoload :ParticipatorySpaceManifest, "decidim/participatory_space_manifest"
   autoload :ResourceManifest, "decidim/resource_manifest"
   autoload :Resourceable, "decidim/resourceable"
+  autoload :Traceable, "decidim/traceable"
   autoload :Reportable, "decidim/reportable"
   autoload :Authorable, "decidim/authorable"
   autoload :Participable, "decidim/participable"
@@ -254,5 +255,10 @@ module Decidim
   # Public: Stores an instance of ViewHooks
   def self.view_hooks
     @view_hooks ||= ViewHooks.new
+  end
+
+  # Public: Stores an instance of Traceability
+  def self.traceability
+    @traceability ||= Traceability.new
   end
 end
