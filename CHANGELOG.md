@@ -6,6 +6,7 @@
 
 - **decidim-assemblies**: Show promoted assemblies in the homepage [\#2162](https://github.com/decidim/decidim/pull/2162)
 - **decidim-core**: Add view hooks so external engines can extend the homepage and other sections with their own code [\#2114](https://github.com/decidim/decidim/pull/2114)
+- **decidim-core**: Private one to one conversations [\#2186](https://github.com/decidim/decidim/pull/2186)
 
 **Changed**:
 
