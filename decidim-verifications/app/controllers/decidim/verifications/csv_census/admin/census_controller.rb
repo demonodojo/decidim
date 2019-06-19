@@ -5,7 +5,6 @@ module Decidim
     module CsvCensus
       module Admin
         class CensusController < Decidim::Admin::ApplicationController
-          include NeedsPermission
 
           layout "decidim/admin/users"
 
@@ -50,17 +49,6 @@ module Decidim
             current_organization.available_authorizations.include?("csv_census")
           end
 
-          def permission_class_chain
-            [
-              Decidim::Verifications::CsvCensus::Admin::Permissions,
-              Decidim::Admin::Permissions,
-              Decidim::Permissions
-            ]
-          end
-
-          def permission_scope
-            :admin
-          end
         end
       end
     end
