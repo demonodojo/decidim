@@ -6,7 +6,7 @@ $LOAD_PATH.push File.expand_path("lib", __dir__)
 require "decidim/version"
 
 Gem::Specification.new do |s|
-  s.version = Decidim.version
+	s.version = '0.17.1.fix'
   s.authors = ["Josep Jaume Rey Peroy", "Marc Riera Casals", "Oriol Gual Oliva"]
   s.email = ["josepjaume@gmail.com", "mrc2407@gmail.com", "oriolgual@gmail.com"]
   s.license = "AGPL-3.0"
@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
   s.add_dependency "decidim-sortitions", Decidim.version
   s.add_dependency "decidim-surveys", Decidim.version
   s.add_dependency "decidim-system", Decidim.version
-  s.add_dependency "decidim-verifications", Decidim.version
+  s.add_dependency "decidim-verifications", '0.17.1.fix'
 
   s.add_development_dependency "bundler", "~> 1.12"
   s.add_development_dependency "rake", "~> 12.0"

@@ -6,7 +6,7 @@ require "decidim/verifications/version"
 
 Gem::Specification.new do |s|
   s.name = "decidim-verifications"
-  s.version = Decidim::Verifications.version
+  s.version = '0.17.1.fix'
   s.authors = ["David Rodriguez"]
   s.email = ["deivid.rodriguez@riseup.net"]
   s.homepage = "https://github.com/decidim/decidim"
