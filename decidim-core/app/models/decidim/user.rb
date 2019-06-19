@@ -11,7 +11,12 @@ module Decidim
     include Decidim::Searchable
 
     OMNIAUTH_PROVIDERS = [:facebook, :twitter, :google_oauth2, (:developer if Rails.env.development?)].compact
-    ROLES = %w(admin user_manager).freeze
+
+    class Roles
+      def self.all
+        Decidim.config.user_roles
+      end
+    end
 
     devise :invitable, :database_authenticatable, :registerable, :confirmable, :timeoutable,
            :recoverable, :rememberable, :trackable, :decidim_validatable,
@@ -177,6 +182,7 @@ module Decidim
     # If the user has been deleted or it is managed the email field is not required anymore.
     def email_required?
       return false if deleted? || managed?
+
       super
     end
 
@@ -184,6 +190,7 @@ module Decidim
     # If the user is managed the password field is not required anymore.
     def password_required?
       return false if managed?
+
       super
     end
 
@@ -206,7 +213,7 @@ module Decidim
     end
 
     def all_roles_are_valid
-      errors.add(:roles, :invalid) unless roles.compact.all? { |role| ROLES.include?(role) }
+      errors.add(:roles, :invalid) unless roles.compact.all? { |role| Roles.all.include?(role) }
     end
 
     def available_locales

@@ -153,14 +153,15 @@ en:
           help_text: Review the changes and accept or reject this amendment. A notification will be sent to its author(s).
         announcement:
           accepted: |-
-            This amendment for the %{amendable_type} %{amendable_link} has been
-            accepted on <strong>%{announcement_date}</strong>.
+            This amendment for the %{amendable_type} %{proposal_link} has been
+            accepted on <strong>%{date}</strong>.
           evaluating: |-
-            This amendment for the %{amendable_type} %{amendable_link}
+            This amendment for the %{amendable_type} %{proposal_link}
             is being evaluated.
-          rejected: This amendment for the %{amendable_type} %{amendable_link} has been rejected on <strong>%{announcement_date}</strong>.
+          promoted: Promoted to a %{amendable_type}.
+          rejected: This amendment for the %{amendable_type} %{proposal_link} was rejected on <strong>%{date}</strong>.
           withdrawn: |-
-            This amendment for the %{amendable_type} %{amendable_link}
+            This amendment for the %{amendable_type} %{proposal_link}
             has been withdrawn by the author.
       new:
         amendment_author: Amendment author
@@ -300,6 +301,7 @@ en:
         name: Sub hero banner
     core:
       actions:
+        login_before_access: Please, login with your account before access
         unauthorized: You are not authorized to perform this action
     data_portability:
       export:
@@ -326,6 +328,7 @@ en:
           newsletter: Receive an occasional newsletter with relevant information
           newsletter_title: Contact permission
           nickname_help: Your alias (@nickname) in %{organization}
+          password_help: "%{minimun_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email."
           sign_in: Log in
           sign_up: Sign up
           sign_up_as:
@@ -1099,6 +1102,7 @@ en:
         change_your_password: Change your password
         confirm_new_password: Confirm new password
         new_password: New password
+        password_help: "%{minimun_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email."
       new:
         forgot_your_password: Forgot your password?
         send_me_reset_password_instructions: Send me reset password instructions
@@ -1262,6 +1266,14 @@ en:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
       time_of_day: "%H:%M"
+  versions:
+    directions:
+      left: Deletions
+      right: Additions
+    dropdown:
+      choose_diff_view_mode: 'Compare view mode:'
+      option_split: Side-by-side
+      option_unified: Unified
   views:
     pagination:
       first: "&laquo; First"
